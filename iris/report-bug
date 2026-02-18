@@ -1,0 +1,68 @@
+---
+layout: default
+title: "Report a bug — IRIS"
+description: "Melde einen Bug in IRIS per E-Mail mit dem Betreff IRIS_BUG."
+---
+<section class="section">
+  <div class="container report-bug-wrap">
+    <h1>IRIS Bug melden</h1>
+    <p class="lead maxw">
+      Nutze das Formular unten, um einen Bug zu melden. Beim Absenden öffnet sich dein Mail-Programm
+      mit einem festen Betreff im Format <strong>IRIS_BUG: [dein Titel]</strong>.
+    </p>
+
+    <div class="card report-bug-card">
+      <form id="bug-report-form" class="report-form">
+        <label for="bug-title">Kurzer Titel *</label>
+        <input id="bug-title" name="bug-title" type="text" required maxlength="120" placeholder="z. B. Crash beim Öffnen des Netzwerk-Monitors" />
+
+        <label for="bug-description">Beschreibung *</label>
+        <textarea id="bug-description" name="bug-description" required rows="8" placeholder="Was ist passiert? Was hast du erwartet? Welche Schritte führen zum Fehler?"></textarea>
+
+        <label for="bug-version">IRIS Version (optional)</label>
+        <input id="bug-version" name="bug-version" type="text" maxlength="60" placeholder="z. B. 1.3.0" />
+
+        <label for="bug-device">Gerät / Android-Version (optional)</label>
+        <input id="bug-device" name="bug-device" type="text" maxlength="120" placeholder="z. B. Pixel 8, Android 15" />
+
+        <button class="btn" type="submit">Bug per E-Mail melden</button>
+      </form>
+
+      <p class="small muted">
+        E-Mail-Empfänger: <a href="mailto:may@maytronic-systems.com">may@maytronic-systems.com</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var form = document.getElementById('bug-report-form');
+    if (!form) return;
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var title = document.getElementById('bug-title').value.trim();
+      var description = document.getElementById('bug-description').value.trim();
+      var version = document.getElementById('bug-version').value.trim();
+      var device = document.getElementById('bug-device').value.trim();
+
+      var subject = 'IRIS_BUG: ' + title;
+      var bodyLines = [
+        'Beschreibung:',
+        description,
+        '',
+        'IRIS Version: ' + (version || 'nicht angegeben'),
+        'Gerät / Android: ' + (device || 'nicht angegeben')
+      ];
+
+      var mailto =
+        'mailto:may@maytronic-systems.com' +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(bodyLines.join('\n'));
+
+      window.location.href = mailto;
+    });
+  })();
+</script>
