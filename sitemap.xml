@@ -1,9 +1,14 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://maytronic-systems.github.io/Maytronic_Systems_Web/</loc></url>
-  <url><loc>https://maytronic-systems.github.io/Maytronic_Systems_Web/iris/</loc></url>
-  <url><loc>https://maytronic-systems.github.io/Maytronic_Systems_Web/support/</loc></url>
-  <url><loc>https://maytronic-systems.github.io/Maytronic_Systems_Web/press/</loc></url>
-  <url><loc>https://maytronic-systems.github.io/Maytronic_Systems_Web/legal/privacy/</loc></url>
-  <url><loc>https://maytronic-systems.github.io/Maytronic_Systems_Web/legal/imprint/</loc></url>
+  <url><loc>{{ '/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/iris/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/support/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/press/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/legal/privacy/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/legal/imprint/' | absolute_url }}</loc></url>
 </urlset>
