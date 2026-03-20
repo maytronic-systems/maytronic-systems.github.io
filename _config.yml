@@ -1,5 +1,6 @@
 title: "Maytronic Systems"
-baseurl: 
+description: "Custom software and technical digital solutions by Maytronic Systems."
+baseurl:
 url: "https://maytronic-systems.github.io"
 
 markdown: kramdown
