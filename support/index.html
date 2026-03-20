@@ -1,110 +1,82 @@
 ---
 layout: default
-title: "Support — IRIS"
-description: "Support and FAQ for IRIS (Android). Troubleshooting, permissions, usage access, network stats, and contact."
+title: "Support — IRIS by Maytronic Systems"
+description: "Support and FAQ for IRIS, the Android product by Maytronic Systems."
 ---
 <section class="section">
-      <div class="container">
-        <h1>Support</h1>
-        <p class="lead maxw">
-          IRIS is a visualization and monitoring dashboard. Some Android data sources require explicit user-granted access
-          (e.g., Usage Access). This page explains the most common issues.
-        </p>
+  <div class="container">
+    <p class="badge">Support</p>
+    <h1>IRIS support</h1>
+    <p class="lead maxw">
+      This page covers common questions about IRIS and provides a direct contact path for product support.
+    </p>
 
-        <div class="callout">
-          <strong>Contact:</strong> 
-          <a href="mailto:may@maytronic-systems.com?subject=IRIS%20Support%20Request&body=Device%20model:%0AAndroid%20version:%0AIRIS%20version:%0A%0ADescription:%0A">
-          may@maytronic-systems.com
-        </a>
-
-          <span class="muted">— include device model, Android version, and IRIS app version.</span>
-               <div class="cta-row" style="margin-top: 0.75rem;">
-            <a class="btn btn-small" href="{{ '/iris/report-bug/' | relative_url }}">Report a bug</a>
-          </div>
-        </div>
+    <div class="callout">
+      <strong>Contact:</strong>
+      <a href="mailto:may@maytronic-systems.com?subject=IRIS%20Support%20Request&body=Device%20model:%0AAndroid%20version:%0AIRIS%20version:%0A%0ADescription:%0A">may@maytronic-systems.com</a>
+      <span class="muted">— include device model, Android version, and the IRIS version if available.</span>
+      <div class="cta-row top-gap">
+        <a class="btn btn-small" href="{{ '/iris/report-bug/' | relative_url }}">Report a bug</a>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="section section-accent">
-      <div class="container">
-        <h2>FAQ</h2>
-
-        <div class="faq">
-          <details class="card" open>
-            <summary>Why does IRIS ask for “Usage Access”?</summary>
-            <div class="faq-body">
-              <p>
-                Certain dashboards rely on Android usage statistics APIs. Android requires explicit user permission
-                (“Usage Access”) to read those aggregated usage signals.
-              </p>
-              <p class="muted small">
-                IRIS uses this access to visualize usage and related summaries; it does not claim to control other apps.
-              </p>
-            </div>
-          </details>
-
-          <details class="card">
-            <summary>Network traffic values look different from my carrier / router.</summary>
-            <div class="faq-body">
-              <p>
-                Android-provided network statistics may differ from external measurements (carrier, router, VPN, etc.)
-                due to sampling windows, rounding, or measurement boundaries.
-              </p>
-            </div>
-          </details>
-
-          <details class="card">
-            <summary>Why do some apps show limited data?</summary>
-            <div class="faq-body">
-              <p>
-                Some system constraints and OEM implementations limit visibility for certain apps or time windows.
-                If you recently installed IRIS, it may also take time to build meaningful historical summaries.
-              </p>
-            </div>
-          </details>
-
-          <details class="card">
-            <summary>Does IRIS block trackers or prevent network connections?</summary>
-            <div class="faq-body">
-              <p>
-                No. IRIS focuses on visualization and analysis. It provides dashboards and summaries so you can make your own decisions.
-              </p>
-            </div>
-          </details>
-
-          <details class="card">
-            <summary>I purchased Pro but features are locked.</summary>
-            <div class="faq-body">
-              <p>
-                Ensure you are signed in with the same Google account used for purchase. Then try restoring purchases (if available)
-                and restart the app. If it still fails, contact support with your order ID (optional).
-              </p>
-            </div>
-          </details>
+<section class="section section-accent">
+  <div class="container">
+    <h2>FAQ</h2>
+    <div class="faq">
+      <details class="card" open>
+        <summary>Why does IRIS ask for usage-related access?</summary>
+        <div class="faq-body">
+          <p>Some IRIS views depend on Android system APIs that require explicit access from the user before app activity summaries can be displayed.</p>
         </div>
-      </div>
-    </section>
+      </details>
 
-    <section class="section">
-      <div class="container">
-        <h2>Troubleshooting checklist</h2>
-        <ol class="steps">
-          <li>Update IRIS to the latest version.</li>
-          <li>Restart the device (ensures system stats providers are refreshed).</li>
-          <li>Grant required access (Usage Access, notifications for alerts, etc.).</li>
-          <li>Verify battery optimization settings if background monitoring is used.</li>
-          <li>If needed: send a support email with logs (where available) and your exact steps to reproduce.</li>
-        </ol>
-
-        <div class="divider"></div>
-
-        <h2>Legal & policies</h2>
-        <p class="muted maxw">
-          For details on data handling and contact information, see our legal pages.
-        </p>
-        <div class="cta-row">
-          <a class="btn btn-ghost" href="{{ '/legal/privacy/' | relative_url }}">Privacy policy</a>
-          <a class="btn btn-ghost" href="{{ '/legal/imprint/' | relative_url }}">Imprint</a>
+      <details class="card">
+        <summary>Why can traffic values differ from carrier or router measurements?</summary>
+        <div class="faq-body">
+          <p>Different systems use different sampling intervals, boundaries, and aggregation rules, so totals can vary across sources.</p>
         </div>
+      </details>
+
+      <details class="card">
+        <summary>Why is some data incomplete for certain apps?</summary>
+        <div class="faq-body">
+          <p>Android system limitations, OEM differences, and short collection history can reduce the amount of information available for some apps.</p>
+        </div>
+      </details>
+
+      <details class="card">
+        <summary>Does IRIS block other apps or network connections?</summary>
+        <div class="faq-body">
+          <p>No. IRIS is designed as an inspection and visualization product, not as a blocking or intervention tool.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split split-wide">
+    <div>
+      <h2>Troubleshooting checklist</h2>
+      <ol class="steps">
+        <li>Update IRIS to the latest available version.</li>
+        <li>Restart the device if system-provided statistics appear stale.</li>
+        <li>Confirm that any required Android access has been granted.</li>
+        <li>Review battery optimization settings if background behavior is relevant.</li>
+        <li>Send a bug report with reproduction steps if the issue persists.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h3>Related pages</h3>
+      <div class="cta-row">
+        <a class="btn btn-ghost" href="{{ '/iris/' | relative_url }}">IRIS product page</a>
+        <a class="btn btn-ghost" href="{{ '/legal/privacy/' | relative_url }}">Privacy policy</a>
+        <a class="btn btn-ghost" href="{{ '/legal/imprint/' | relative_url }}">Imprint</a>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
