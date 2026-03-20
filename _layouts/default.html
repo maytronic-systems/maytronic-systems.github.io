@@ -6,8 +6,12 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   {% if page.description %}<meta name="description" content="{{ page.description | escape }}" />{% endif %}
   <meta name="theme-color" content="#081018" />
+  <meta property="og:site_name" content="Maytronic Systems" />
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+  {% if page.description %}<meta property="og:description" content="{{ page.description | escape }}" />{% endif %}
+  <meta property="og:type" content="website" />
 
-  <link rel="icon" href="{{ '/assets/img/iris-logo.png' | relative_url }}" type="image/svg+xml" />
+  <link rel="icon" href="{{ '/assets/img/iris-logo.png' | relative_url }}" type="image/png" />
   <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}" />
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
 </head>
@@ -19,6 +23,20 @@
   <main id="main">
     {{ content }}
   </main>
+
+    <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Maytronic Systems</strong>
+        <p class="muted footer-copy">Custom software, technical digital tools, and focused product development.</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:may@maytronic-systems.com">may@maytronic-systems.com</a>
+        <a href="{{ '/legal/privacy/' | relative_url }}">Privacy</a>
+        <a href="{{ '/legal/imprint/' | relative_url }}">Imprint</a>
+      </div>
+    </div>
+  </footer>
 
   <script defer src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
