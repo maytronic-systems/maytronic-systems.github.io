@@ -8,7 +8,7 @@
   "icons": [
     {
       "src": "{{ '/assets/img/iris-logo.png' | relative_url }}",
-      "sizes": "1024x1536",
+      "sizes": "205x307",
       "type": "image/png"
     }
   ]
