@@ -8,7 +8,6 @@ permalink: /sitemap.xml
   <url><loc>{{ '/' | absolute_url }}</loc></url>
   <url><loc>{{ '/iris/' | absolute_url }}</loc></url>
   <url><loc>{{ '/support/' | absolute_url }}</loc></url>
-  <url><loc>{{ '/press/' | absolute_url }}</loc></url>
   <url><loc>{{ '/legal/privacy/' | absolute_url }}</loc></url>
   <url><loc>{{ '/legal/imprint/' | absolute_url }}</loc></url>
 </urlset>
