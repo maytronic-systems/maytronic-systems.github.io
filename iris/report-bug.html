@@ -1,35 +1,36 @@
 ---
 layout: default
 title: "Report a bug — IRIS"
-description: "Melde einen Bug in IRIS per E-Mail mit dem Betreff IRIS_BUG."
+description: "Open an email draft to report an IRIS bug to Maytronic Systems."
+permalink: /iris/report-bug/
 ---
 <section class="section">
   <div class="container report-bug-wrap">
-    <h1>IRIS Bug melden</h1>
+    <p class="badge">IRIS support</p>
+    <h1>Report an IRIS bug</h1>
     <p class="lead maxw">
-      Nutze das Formular unten, um einen Bug zu melden. Beim Absenden öffnet sich dein Mail-Programm
-      mit einem festen Betreff im Format <strong>IRIS_BUG: [dein Titel]</strong>.
+      Use the form below to prepare a bug report email with the information that is most helpful for troubleshooting.
     </p>
 
     <div class="card report-bug-card">
       <form id="bug-report-form" class="report-form">
-        <label for="bug-title">Kurzer Titel *</label>
-        <input id="bug-title" name="bug-title" type="text" required maxlength="120" placeholder="z. B. Crash beim Öffnen des Netzwerk-Monitors" />
+        <label for="bug-title">Short title *</label>
+        <input id="bug-title" name="bug-title" type="text" required maxlength="120" placeholder="For example: Crash when opening the network monitor" />
 
-        <label for="bug-description">Beschreibung *</label>
-        <textarea id="bug-description" name="bug-description" required rows="8" placeholder="Was ist passiert? Was hast du erwartet? Welche Schritte führen zum Fehler?"></textarea>
+        <label for="bug-description">Description *</label>
+        <textarea id="bug-description" name="bug-description" required rows="8" placeholder="What happened, what did you expect, and how can the issue be reproduced?"></textarea>
 
-        <label for="bug-version">IRIS Version (optional)</label>
-        <input id="bug-version" name="bug-version" type="text" maxlength="60" placeholder="z. B. 1.3.0" />
+        <label for="bug-version">IRIS version (optional)</label>
+        <input id="bug-version" name="bug-version" type="text" maxlength="60" placeholder="For example: 1.3.0" />
 
-        <label for="bug-device">Gerät / Android-Version (optional)</label>
-        <input id="bug-device" name="bug-device" type="text" maxlength="120" placeholder="z. B. Pixel 8, Android 15" />
+        <label for="bug-device">Device / Android version (optional)</label>
+        <input id="bug-device" name="bug-device" type="text" maxlength="120" placeholder="For example: Pixel 8, Android 15" />
 
-        <button class="btn" type="submit">Bug per E-Mail melden</button>
+        <button class="btn" type="submit">Create bug report email</button>
       </form>
 
       <p class="small muted">
-        E-Mail-Empfänger: <a href="mailto:may@maytronic-systems.com">may@maytronic-systems.com</a>
+        E-mail recipient: <a href="mailto:may@maytronic-systems.com">may@maytronic-systems.com</a>
       </p>
     </div>
   </div>
@@ -50,11 +51,11 @@ description: "Melde einen Bug in IRIS per E-Mail mit dem Betreff IRIS_BUG."
 
       var subject = 'IRIS_BUG: ' + title;
       var bodyLines = [
-        'Beschreibung:',
+        'Description:',
         description,
         '',
-        'IRIS Version: ' + (version || 'nicht angegeben'),
-        'Gerät / Android: ' + (device || 'nicht angegeben')
+        'IRIS version: ' + (version || 'not provided'),
+        'Device / Android: ' + (device || 'not provided')
       ];
 
       var mailto =
