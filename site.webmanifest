@@ -1,13 +1,13 @@
 {
-  "name": "Maytronic Systems — IRIS",
-  "short_name": "IRIS",
- "start_url": "{{ '/' | relative_url }}",
+  "name": "Maytronic Systems",
+  "short_name": "Maytronic",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#061018",
   "theme_color": "#081018",
   "icons": [
     {
-      "src": "{{ '/assets/img/iris-logo.png' | relative_url }}",
+      "src": "/assets/img/iris-logo.png",
       "sizes": "205x307",
       "type": "image/png"
     }
