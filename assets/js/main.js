@@ -62,6 +62,20 @@
   let touchStartX = 0;
   let touchDeltaX = 0;
 
+    const getSlideOffset = () => {
+    const firstSlide = track.querySelector(".gallery-slide");
+
+    if (!firstSlide) {
+      return 0;
+    }
+
+    const trackStyles = window.getComputedStyle(track);
+    const slideGap = Number.parseFloat(trackStyles.columnGap || trackStyles.gap || "0") || 0;
+
+    return firstSlide.getBoundingClientRect().width + slideGap;
+  };
+
+
   screenshots.forEach((shot, index) => {
     const slide = document.createElement("article");
     slide.className = "gallery-slide";
@@ -113,7 +127,7 @@
 
   const updateGallery = (nextIndex) => {
     currentIndex = (nextIndex + screenshots.length) % screenshots.length;
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    track.style.transform = `translateX(-${currentIndex * getSlideOffset()}px)`;
 
     const activeShot = screenshots[currentIndex];
     caption.textContent = `${activeShot.title} — ${activeShot.description}`;
@@ -181,6 +195,7 @@
       updateGallery(currentIndex - 1);
     }
   });
-
+  window.addEventListener("resize", () => updateGallery(currentIndex));
+  
   updateGallery(0);
 })();
