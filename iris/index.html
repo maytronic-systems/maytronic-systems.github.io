@@ -75,6 +75,88 @@ description: "IRIS is an Android analytics product by Maytronic Systems for visu
   </div>
 </section>
 
+<section class="section screenshots-section" id="screens">
+  <div class="container">
+    <div class="screenshots-header">
+      <div>
+        <p class="badge">Product tour</p>
+        <h2>IRIS screenshots</h2>
+      </div>
+      <p class="muted maxw">
+        Browse the current IRIS interface with a touch-friendly gallery that keeps the focus on the product itself.
+      </p>
+    </div>
+
+    <div class="screens-gallery" data-gallery aria-label="IRIS screenshots gallery" tabindex="0">
+      <div class="screens-gallery-shell">
+        <button class="gallery-nav gallery-nav-prev" type="button" aria-label="Show previous screenshot" data-gallery-prev>
+          <span aria-hidden="true">‹</span>
+        </button>
+
+        <div class="gallery-stage">
+          <div class="gallery-track" data-gallery-track></div>
+        </div>
+
+        <button class="gallery-nav gallery-nav-next" type="button" aria-label="Show next screenshot" data-gallery-next>
+          <span aria-hidden="true">›</span>
+        </button>
+      </div>
+
+      <div class="gallery-meta">
+        <div>
+          <p class="gallery-eyebrow small muted">Current view</p>
+          <p class="gallery-caption" data-gallery-caption>Loading screenshots…</p>
+        </div>
+        <p class="gallery-counter small muted" data-gallery-counter aria-live="polite"></p>
+      </div>
+
+      <div class="gallery-dots" data-gallery-dots role="tablist" aria-label="Choose a screenshot"></div>
+      <div class="gallery-thumbs" data-gallery-thumbs aria-label="Screenshot thumbnails"></div>
+    </div>
+
+    <script type="application/json" data-gallery-data>
+      [
+      {
+          "src": "{{ '/assets/img/MainMenu.png' | relative_url }}",
+          "alt": "IRIS Main Menu screenshot",
+          "title": "Main Menu",
+          "description": "The IRIS Main Page."
+        },
+        {
+          "src": "{{ '/assets/img/ActivityMonitorOverview_store.png' | relative_url }}",
+          "alt": "IRIS activity monitor overview screenshot",
+          "title": "Activity monitor overview",
+          "description": "A high-level summary view for permissions and app-related activity signals."
+        },
+        {
+          "src": "{{ '/assets/img/ActivityMonitor_store.png' | relative_url }}",
+          "alt": "IRIS activity monitor screenshot",
+          "title": "Activity monitor",
+          "description": "A detailed app activity view organized for quick inspection and comparison."
+        },
+        {
+          "src": "{{ '/assets/img/NetworkMon_store.png' | relative_url }}",
+          "alt": "IRIS network monitor screenshot",
+          "title": "Network monitor",
+          "description": "A focused breakdown of network-heavy apps and traffic-related information."
+        },
+        {
+          "src": "{{ '/assets/img/Report_store.png' | relative_url }}",
+          "alt": "IRIS report screenshot",
+          "title": "Report view",
+          "description": "Structured reporting for summarizing findings in a compact view."
+        },
+        {
+          "src": "{{ '/assets/img/Usage_store.png' | relative_url }}",
+          "alt": "IRIS usage screenshot",
+          "title": "Usage view",
+          "description": "Foreground and background usage information presented in a readable timeline-oriented format."
+        }
+      ]
+    </script>
+  </div>
+</section>
+
 <section class="section" id="get">
   <div class="container split split-wide">
     <div>
