@@ -1,0 +1,59 @@
+diff --git a/iris/index.html b/iris/index.html
+index 5b462752676506f95c6ec37ce9f22390a5d44d87..c13501d01c5d40fcc8dd7d5d789a74a100cb3bc7 100644
+--- a/iris/index.html
++++ b/iris/index.html
+@@ -89,51 +89,50 @@ description: "IRIS is an Android analytics product by Maytronic Systems for visu
+ 
+     <div class="screens-gallery" data-gallery aria-label="IRIS screenshots gallery" tabindex="0">
+       <div class="screens-gallery-shell">
+         <button class="gallery-nav gallery-nav-prev" type="button" aria-label="Show previous screenshot" data-gallery-prev>
+           <span aria-hidden="true">‹</span>
+         </button>
+ 
+         <div class="gallery-stage">
+           <div class="gallery-track" data-gallery-track></div>
+         </div>
+ 
+         <button class="gallery-nav gallery-nav-next" type="button" aria-label="Show next screenshot" data-gallery-next>
+           <span aria-hidden="true">›</span>
+         </button>
+       </div>
+ 
+       <div class="gallery-meta">
+         <div>
+           <p class="gallery-eyebrow small muted">Current view</p>
+           <p class="gallery-caption" data-gallery-caption>Loading screenshots…</p>
+         </div>
+         <p class="gallery-counter small muted" data-gallery-counter aria-live="polite"></p>
+       </div>
+ 
+       <div class="gallery-dots" data-gallery-dots role="tablist" aria-label="Choose a screenshot"></div>
+-      <div class="gallery-thumbs" data-gallery-thumbs aria-label="Screenshot thumbnails"></div>
+     </div>
+ 
+     <script type="application/json" data-gallery-data>
+       [
+       {
+           "src": "{{ '/assets/img/MainMenu.png' | relative_url }}",
+           "alt": "IRIS Main Menu screenshot",
+           "title": "Main Menu",
+           "description": "The IRIS Main Page."
+         },
+         {
+           "src": "{{ '/assets/img/ActivityMonitorOverview_store.png' | relative_url }}",
+           "alt": "IRIS activity monitor overview screenshot",
+           "title": "Activity monitor overview",
+           "description": "A high-level summary view for permissions and app-related activity signals."
+         },
+         {
+           "src": "{{ '/assets/img/ActivityMonitor_store.png' | relative_url }}",
+           "alt": "IRIS activity monitor screenshot",
+           "title": "Activity monitor",
+           "description": "A detailed app activity view organized for quick inspection and comparison."
+         },
+         {
+           "src": "{{ '/assets/img/NetworkMon_store.png' | relative_url }}",
+           "alt": "IRIS network monitor screenshot",
+ 
+EOF
+)
