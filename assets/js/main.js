@@ -37,11 +37,10 @@
   const caption = gallery.querySelector("[data-gallery-caption]");
   const counter = gallery.querySelector("[data-gallery-counter]");
   const dots = gallery.querySelector("[data-gallery-dots]");
-  const thumbs = gallery.querySelector("[data-gallery-thumbs]");
   const prevButton = gallery.querySelector("[data-gallery-prev]");
   const nextButton = gallery.querySelector("[data-gallery-next]");
 
-  if (!track || !caption || !counter || !dots || !thumbs || !prevButton || !nextButton) {
+  if (!track || !caption || !counter || !dots || !prevButton || !nextButton) {
     return;
   }
 
@@ -104,26 +103,9 @@
     dot.addEventListener("click", () => updateGallery(index));
     dots.appendChild(dot);
 
-    const thumb = document.createElement("button");
-    thumb.className = "gallery-thumb";
-    thumb.type = "button";
-    thumb.setAttribute("aria-label", `Preview ${shot.title}`);
-    thumb.innerHTML = `
-      <img
-        src="${shot.src}"
-        alt=""
-        width="1440"
-        height="3120"
-        loading="lazy"
-        decoding="async"
-      />
-    `;
-    thumb.addEventListener("click", () => updateGallery(index));
-    thumbs.appendChild(thumb);
   });
 
   const dotButtons = Array.from(dots.querySelectorAll(".gallery-dot"));
-  const thumbButtons = Array.from(thumbs.querySelectorAll(".gallery-thumb"));
 
   const updateGallery = (nextIndex) => {
     currentIndex = (nextIndex + screenshots.length) % screenshots.length;
@@ -137,12 +119,6 @@
       const isActive = index === currentIndex;
       dot.setAttribute("aria-selected", String(isActive));
       dot.setAttribute("tabindex", isActive ? "0" : "-1");
-    });
-
-    thumbButtons.forEach((thumb, index) => {
-      const isActive = index === currentIndex;
-      thumb.classList.toggle("is-active", isActive);
-      thumb.setAttribute("aria-current", isActive ? "true" : "false");
     });
 
     const disableControls = screenshots.length < 2;
